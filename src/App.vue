@@ -1,26 +1,62 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <div class="layout">
+    <appHeader :user="user" @logout="logout"/>
+
+    <router-view :user="user" @logout="logout" class="globalfont center" >
+    </router-view>
+
+    <appFooter></appFooter>
+  </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  // @ is an alias to /src
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  import header from "@/components/header.vue";
+  import { ref } from "vue";
+  import { useRouter } from "vue-router";
+  import {
+    firebaseAuthentication,
+    // firebaseFireStore,
+    // timestamp,
+  } from "@/firebase/database";
+  
+  export default {
+    components: {
+   
+      appHeader: header
+    },
+    setup() {
+      const user = ref("");
+      const errorLogout = ref(null);
+  
+      firebaseAuthentication.onAuthStateChanged((currentUser) => {
+        if (currentUser) {
+          user.value = currentUser.email;
+          console.log(user.value);
+        } else {
+          user.value == null;
+        }
+      });
+  
+      const router = useRouter();
+  
+      function logout() {
+        firebaseAuthentication.signOut().then(
+          () => {
+            router.push("login");
+            user.value = null;
+          },
+          (error) => {
+            errorLogout.value = error.message;
+          }
+        );
+      }
+  
+      return {
+        user,
+        logout,
+      };
+    },
+  };
+  </script>
