@@ -6,7 +6,7 @@
     >
       <h2>Register</h2>
       <!-- Email field -->
-      <el-form-item label="** Email: ">
+      <el-form-item label=" Email: ">
         <el-input 
         type="text"
         placeholder="Enter your email"
@@ -17,7 +17,7 @@
       </el-form-item>
 
       <!-- Username field -->
-      <el-form-item label="** Username: ">
+      <el-form-item label=" Username: ">
         <el-input 
         type="text"
         placeholder="Create a username"
@@ -28,7 +28,7 @@
       </el-form-item>
 
       <!-- Password field -->
-      <el-form-item label="** Password: ">
+      <el-form-item label=" Password: ">
         <el-input 
         type="password"
         placeholder="Create a strong password"
@@ -39,7 +39,7 @@
       </el-form-item>
 
       <!-- PW confirmation field -->
-      <el-form-item label="** Password Confirmation: ">
+      <el-form-item label=" Password Confirmation: ">
         <el-input 
         type="password"
         placeholder="...re-type password again"
@@ -50,7 +50,7 @@
       </el-form-item>
 
       <!-- full name -->
-      <el-form-item label="** Name(s): ">
+      <el-form-item label=" Name(s): ">
         <el-input 
         type="text"
         placeholder="...full name(s)"
@@ -61,7 +61,7 @@
       </el-form-item>
 
       <!-- Institution name -->
-      <el-form-item label="** Institution(s): ">
+      <el-form-item label=" Institution(s): ">
         <el-input 
         type="text"
         placeholder="...research/education organisations etc"
