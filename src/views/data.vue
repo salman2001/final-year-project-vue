@@ -1,6 +1,6 @@
 <template>
     <div>
-        this is an about page
+        this is a data page
     </div>
 </template>
 <script>

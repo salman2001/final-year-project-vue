@@ -4,16 +4,12 @@
    </div>
    <div id="nav">
       <router-link style="float:left" v-bind:to="{ name: 'Home' }">Home</router-link> 
+      <router-link style="float:left" v-bind:to="{ name: 'About' }">About</router-link>
       
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Login'}">Login</router-link>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Registration'}">Register</router-link>
 
       <div style="float:right" v-if="user" >
-         <!-- Logged in (
-            <span style = "color: white; font-weight: bold"> {{ user }} </span> )
-            <a @click="$emit('logout')">Logout? </a>
-            <router-link style="float:right" :to="{ name: 'MyGraphs'}">My Graphs</router-link> 
-            <router-link style="float:right" :to="{ name: 'MyAccount'}">My Account|</router-link>  -->
          <div class="dropdown">
            <i icon="el-icon-user"> </i>
             <button class="dropbtn" icon="el-icon-user" >
@@ -24,8 +20,7 @@
             </button>
             <div class="dropdown-content">
                <router-link  :to="{ name: 'MyAccount'}">My Account</router-link>
-               
-               
+               <router-link style="float:left" v-bind:to="{ name: 'data' }">Data</router-link>
                <a @click="$emit('logout'); redirectToLogin">Logout</a>
             </div>
          </div>
