@@ -38,6 +38,21 @@ const routes = [
     name: 'data',
     component: () => import('@/views/data.vue')
   },
+  {
+    path: '/tags',
+    name: 'tags',
+    component: () => import('@/views/tags.vue')
+  },
+  {
+    path: '/div',
+    name: 'div',
+    component: () => import('@/views/tags/div.vue')
+  },
+  {
+    path: '/headertag',
+    name: 'headertag',
+    component: () => import('@/views/tags/headertag.vue')
+  },
 
 
   

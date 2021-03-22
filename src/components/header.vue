@@ -1,11 +1,9 @@
 <template>
-   <div class="header">
-      <h1>Interactive Tool to Teach HTML</h1>
-   </div>
    <div id="nav">
       <router-link style="float:left" v-bind:to="{ name: 'Home' }">Home</router-link> 
       <router-link style="float:left" v-bind:to="{ name: 'About' }">About</router-link>
-      
+      <router-link style="float:left" v-bind:to="{ name: 'tags' }">Tags</router-link> 
+      <button style="float: right" color="grey" @click="darkThemeSwitch">Grey Mode</button>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Login'}">Login</router-link>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Registration'}">Register</router-link>
 
@@ -31,11 +29,36 @@
 
 <script>
 import {useRouter} from 'vue-router';
+
 export default {
   props: ['user'],
   emits: [
     'logout'
   ],
+  methods: {
+    _addDarkTheme() {
+      let darkThemeLinkEl = document.createElement("link");
+      darkThemeLinkEl.setAttribute("rel", "stylesheet");
+      darkThemeLinkEl.setAttribute("href", "/css/darktheme.css");
+      darkThemeLinkEl.setAttribute("id", "dark-theme-style");
+
+      let docHead = document.querySelector("head");
+      docHead.append(darkThemeLinkEl);
+    },
+    _removeDarkTheme() {
+      let darkThemeLinkEl = document.querySelector("#dark-theme-style");
+      let parentNode = darkThemeLinkEl.parentNode;
+      parentNode.removeChild(darkThemeLinkEl);
+    },
+    darkThemeSwitch() {
+      let darkThemeLinkEl = document.querySelector("#dark-theme-style");
+      if (!darkThemeLinkEl) {
+        this._addDarkTheme()
+      } else {
+        this._removeDarkTheme()
+      }
+    },
+  },
   setup(){
     let router = useRouter();
     function redirectToLogin(){
@@ -45,7 +68,9 @@ export default {
       redirectToLogin
     }
   }
+  
 }
+
 </script>
 
 <style scoped>

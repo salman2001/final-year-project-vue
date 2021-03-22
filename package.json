@@ -12,7 +12,9 @@
     "element-plus": "^1.0.2-beta.34",
     "firebase": "^8.3.0",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.5"
+    "vue-responsive-video-background-player": "^2.1.2",
+    "vue-router": "^4.0.5",
+    "vue-videobg": "^2.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -21,7 +23,8 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0"
+    "eslint-plugin-vue": "^7.0.0-0",
+    "vue-particles": "^1.0.9"
   },
   "eslintConfig": {
     "root": true,

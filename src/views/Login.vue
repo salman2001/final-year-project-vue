@@ -44,7 +44,7 @@
 
         <el-form-item>
           <el-button type="primary" @click="login">Login</el-button>
-            <h2>
+            <h2 align="center" color="black">
               <router-link to="/forgot-password">Forgot password ?</router-link>
             </h2>
         </el-form-item>

@@ -8,11 +8,14 @@
 
     <appFooter></appFooter>
   </div>
+  
+  
 </template>
 <script>
   // @ is an alias to /src
 
   import header from "@/components/header.vue";
+  import footer from "@/components/footer.vue";
   import { ref } from "vue";
   import { useRouter } from "vue-router";
   import {
@@ -22,9 +25,12 @@
   } from "@/firebase/database";
   
   export default {
+    
     components: {
-      appHeader: header
+      appHeader: header,
+      appFooter: footer
     },
+    
     setup() {
       const user = ref("");
       const errorLogout = ref(null);
@@ -57,5 +63,6 @@
         logout,
       };
     },
+   
   };
   </script>

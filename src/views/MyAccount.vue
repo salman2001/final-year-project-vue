@@ -62,7 +62,7 @@
           required
         ></el-input>
       </el-form-item>
-      <el-form-item label="Contact Details">
+      <el-form-item label="phoneNumber">
         <el-input
           v-model="contact_details"
           :placeholder= userDetails.phoneNumber
@@ -93,27 +93,13 @@ export default {
 		},
 	},
 	setup() {
-
-		//  const userId = firebaseAuthentication.currentUser;
 		const userDetails = ref(null);
-		//console.log(firebaseAuthentication.currentUser.uid)
-
-		//  userDetails.value = firebaseFireStore.collection("users").doc(userId);
-
-		//  console.log(userDetails.value)
-		//testing if user is retrieved
-
-
-
 		const snapShotObject = firebaseFireStore.collection("users").doc(`${firebaseAuthentication.currentUser.uid}`)
-
-
 		const unsub = snapShotObject.onSnapshot(
 			doc => {
 				// need to make sure the doc exists & has data
 				if (doc.data()) {
-					// console.log(doc.data());
-					userDetails.value = {
+				userDetails.value = {
 						fullName: doc.data().fullName,
 						email: doc.data().email,
 						institution: doc.data().institution,
