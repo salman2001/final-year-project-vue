@@ -106,15 +106,12 @@ export default {
 						address: doc.data().address,
 						phoneNumber: doc.data().phoneNumber
 					};
-
 				}
 			},
 		);
-
 		watchEffect(onInvalidate => {
 			onInvalidate(() => unsub());
 		});
-
 		console.log(userDetails.value)
 		const email = ref("");
 		const username = ref("");

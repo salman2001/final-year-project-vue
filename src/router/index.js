@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-
+import HTMLeditor from "../views/HTMLeditor.vue";
 const routes = [
   {
     path: '/',
@@ -7,15 +7,22 @@ const routes = [
     component: () => import('@/views/Home.vue')
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('@/views/About.vue')
+    path: '/htmleditor/:tags?',
+    name: 'HTMLeditor',
+    component: HTMLeditor,
+    props: true
+    
   },
   
   {
     path: '/login',
     name: 'Login',
     component: () => import('@/views/Login.vue')
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('@/views/About.vue')
   },
  
   {
@@ -43,19 +50,6 @@ const routes = [
     name: 'tags',
     component: () => import('@/views/tags.vue')
   },
-  {
-    path: '/div',
-    name: 'div',
-    component: () => import('@/views/tags/div.vue')
-  },
-  {
-    path: '/headertag',
-    name: 'headertag',
-    component: () => import('@/views/tags/headertag.vue')
-  },
-
-
-  
 ];
 
 const router = createRouter({

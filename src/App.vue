@@ -6,6 +6,7 @@
     <router-view :user="user" @logout="logout" class="globalfont center" >
     </router-view>
 
+    
     <appFooter></appFooter>
   </div>
   
@@ -16,6 +17,7 @@
 
   import header from "@/components/header.vue";
   import footer from "@/components/footer.vue";
+  
   import { ref } from "vue";
   import { useRouter } from "vue-router";
   import {
@@ -28,7 +30,8 @@
     
     components: {
       appHeader: header,
-      appFooter: footer
+      appFooter: footer,
+      
     },
     
     setup() {
@@ -63,6 +66,5 @@
         logout,
       };
     },
-   
   };
   </script>

@@ -74,14 +74,14 @@ export default {
 .text-block{
    font-size:14pt;
    font-family:Avenir, Helvetica, Arial, sans-serif;
-   margin:20px;
+   margin:10px;
    margin-top:50px;
 }
 .login-or-register{
    border: 1px solid black;
    border-radius: 2px 20px 2px 20px;
    cursor: pointer;
-   transition: transform .2s;
+   transition: transform .3s;
 }
 
 .login-or-register:hover{

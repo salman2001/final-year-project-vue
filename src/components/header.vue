@@ -1,8 +1,10 @@
 <template>
    <div id="nav">
       <router-link style="float:left" v-bind:to="{ name: 'Home' }">Home</router-link> 
+      <router-link style="float:left" v-bind:to="{ name: 'HTMLeditor' }">HTML Editor</router-link>
       <router-link style="float:left" v-bind:to="{ name: 'About' }">About</router-link>
-      <router-link style="float:left" v-bind:to="{ name: 'tags' }">Tags</router-link> 
+
+      <router-link style="float:left" v-bind:to="{ name: 'tags' }">HTML Elements</router-link> 
       <button style="float: right" color="grey" @click="darkThemeSwitch">Grey Mode</button>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Login'}">Login</router-link>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Registration'}">Register</router-link>

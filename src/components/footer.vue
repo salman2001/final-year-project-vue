@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid footer">
+  <div align="center" class="footer">
     <footer id="footer">
         <router-link :to="{ name: 'About'}"> About| </router-link> 
         <router-link :to="{ name: 'forgot-password'}">Forgot Password?</router-link> 
@@ -9,10 +9,10 @@
 
 <style scoped>
 #footer {
-  padding: 60px;
+  display: block;
    margin: 0;
   overflow: hidden;
-    bottom: 0;
+    bottom: 50px;
 
 }
 

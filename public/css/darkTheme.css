@@ -1,7 +1,31 @@
 body {
-    background-color: grey;
+    color: white;
+    background-color: black;
 }
 
 h1,h2,h3,h4,h5,h6,p {
     color: #42b983;
+}
+#nav[data-v-29e8c3c6] a:hover {
+    color: white;
+}
+#nav[data-v-29e8c3c6] a, #nav[data-v-29e8c3c6], button[data-v-26084dc2] {
+    color: black;
+    background-color:white;
+}
+button[data-v-06ae9968]{
+    color: black;
+    background-color: white;
+}
+#footer[data-v-6c4d8baa]{
+    background-color: white;
+}
+.outputPanel[data-v-039c5b43]{
+    background-color: white;
+}
+.outputPanel[data-v-039c5b43]{
+    color:black;
+}
+.second[data-v-6f31ceb3], .first[data-v-6f31ceb3]{
+    color:black;
 }
