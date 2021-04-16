@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Your Account</h1>
+    <h1>My Account</h1>
   </div>
   <body v-if="userDetails">
     <div class="profile">
@@ -21,9 +21,15 @@
           </div>
         </el-card>
       </div>
-      <div style ="display: none">Email : {{userDetails.fullName}}</div>
+      <div class="block">
+        <div class="block-1">Full Name : {{userDetails.fullName}}</div>
+        <div class="block-1">Email: {{userDetails.email}}</div>
+        <div class="block-1">Institution: {{userDetails.institution}}</div>
+        <div class="block-1"> Address: {{userDetails.address}}</div>
+        <div class="block-1">Contact Number:{{userDetails.phoneNumber}}</div>
+      </div>
     </div>
-    <b>
+    <!--<b>
       <div>
         <h1>Update Account</h1>
       </div>
@@ -71,7 +77,7 @@
         ></el-input>
       </el-form-item>
       <el-button>Update Details</el-button>
-    </el-form>
+    </el-form>-->
   </body>
 </template>
 
@@ -155,5 +161,13 @@ button {
   padding: 15px;
   margin: 10px 0px;
   cursor: pointer;
+}
+.block{
+  display: inline-block;
+  border: 2px solid black;
+ 
+}
+.block-1{
+  text-align: left;
 }
 </style>

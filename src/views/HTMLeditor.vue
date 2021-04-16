@@ -1,8 +1,11 @@
 <template>
 
 <h1>{{tag}}</h1>
-<h2>{{tagData.content}}</h2>
-<editor :tagData="tagData"/>
+<div class="">
+  <p1 class="container">{{tagData.content}}</p1>
+  <editor :tagData="tagData"/>
+</div>
+
 </template>
 <script>
 import { useRoute } from 'vue-router';
@@ -13,8 +16,6 @@ import {ref} from "vue";
 export default {
   components: {
  editor: editor,
-
-    
   },
   setup(){
     const route = useRoute();
@@ -39,3 +40,11 @@ export default {
 }
 </script>
 
+<style scoped> 
+.container{
+  padding: 5px;
+  width: 40%;
+  display: inline-block;
+  border: 6px solid grey;
+}
+</style>

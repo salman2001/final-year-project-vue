@@ -1,11 +1,10 @@
 <template>
    <div id="nav">
       <router-link style="float:left" v-bind:to="{ name: 'Home' }">Home</router-link> 
-      <router-link style="float:left" v-bind:to="{ name: 'HTMLeditor' }">HTML Editor</router-link>
       <router-link style="float:left" v-bind:to="{ name: 'About' }">About</router-link>
-
+      <router-link style="float:left" v-bind:to="{ name: 'Editor' }">Live Editor</router-link>
       <router-link style="float:left" v-bind:to="{ name: 'tags' }">HTML Elements</router-link> 
-      <button style="float: right" color="grey" @click="darkThemeSwitch">Grey Mode</button>
+      <button style="float: right" color="grey" @click="darkThemeSwitch">{{isActive ? 'Light Mode' : 'Dark Mode'}}</button>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Login'}">Login</router-link>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Registration'}">Register</router-link>
 
@@ -33,6 +32,11 @@
 import {useRouter} from 'vue-router';
 
 export default {
+  data(){
+  return {
+      isActive: false,
+    };
+  },
   props: ['user'],
   emits: [
     'logout'
@@ -59,6 +63,7 @@ export default {
       } else {
         this._removeDarkTheme()
       }
+      this.isActive = this.isActive ? false : true;
     },
   },
   setup(){

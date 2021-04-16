@@ -1,11 +1,16 @@
 <template>
 
-<h3>HTML Editor</h3>
-
-    <h3>HTML</h3>
-      <textarea id="editor" v-model="text"></textarea>
+<div class="flex-container">
+    
+    <div class="flex-child">
+      <h3>HTML</h3>
+    <textarea id="editor" v-model="text"></textarea>
+  </div>
+  <div class="flex-child">
     <h3>HTML Output</h3>
-      <div class="outputPanel" v-html="text"></div>
+    <div class="outputPanel" v-html="text"></div>
+  </div>
+ </div>
   
 </template>
 <script>
@@ -17,22 +22,34 @@
           const text = ref("");
           console.log(props.tagData.codeString)
           text.value = props.tagData.codeString;
-
-
-          
           return {text} 
       },
   }
 </script>
 <style scoped>
-#editor, .outputPanel{
-      display: inline-block;
-      margin:auto;
-      width: 40%;
+.flex-container {
+    display: flex;
+    
+}
+.flex-child {
+    flex: 1;
+}  
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+#editor{
+      width: 70%;
       height: 300px;
-      border: 3px  solid black;
-      padding: 10px;
-      box-sizing: border-box;
+      border: 6px  solid grey;
+      padding: 0;
+      
+    }
+    .outputPanel{
+      width: 70%;
+      height: 300px;
+      border: 6px  solid grey;
+      padding: 0px;
+      
     }
     
     </style>

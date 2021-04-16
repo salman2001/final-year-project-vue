@@ -50,6 +50,11 @@ const routes = [
     name: 'tags',
     component: () => import('@/views/tags.vue')
   },
+  {
+    path: '/liveEditor',
+    name: 'Editor',
+    component: () => import('@/views/LiveHTMLeditor.vue')
+  },
 ];
 
 const router = createRouter({

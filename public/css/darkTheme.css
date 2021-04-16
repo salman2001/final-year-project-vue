@@ -1,5 +1,5 @@
 body {
-    color: white;
+    color: grey;
     background-color: black;
 }
 
@@ -7,25 +7,49 @@ h1,h2,h3,h4,h5,h6,p {
     color: #42b983;
 }
 #nav[data-v-29e8c3c6] a:hover {
-    color: white;
+    color: grey;
 }
 #nav[data-v-29e8c3c6] a, #nav[data-v-29e8c3c6], button[data-v-26084dc2] {
     color: black;
-    background-color:white;
+    background-color:grey;
 }
 button[data-v-06ae9968]{
     color: black;
-    background-color: white;
+    background-color: grey;
 }
 #footer[data-v-6c4d8baa]{
-    background-color: white;
+    background-color: grey;
 }
 .outputPanel[data-v-039c5b43]{
-    background-color: white;
+    background-color: grey;
 }
 .outputPanel[data-v-039c5b43]{
     color:black;
 }
 .second[data-v-6f31ceb3], .first[data-v-6f31ceb3]{
     color:black;
+}
+.login-or-register{
+    background-color: grey;
+}
+.el-col-offset-1, .el-col-offset-2{
+    color: black;
+}
+.el-col-24{
+    background-color:black;
+}
+.data-v-26084dc2,button[data-v-01266098]{
+    background-color:grey;
+}
+#footer a[data-v-6c4d8baa]{
+    color: black;
+}
+.outputPanel[data-v-18686cfd]{
+    background-color: white;
+}
+.el-card__body{
+    background-color: grey;
+}
+.tags[data-v-6f31ceb3]{
+    background-color: grey;
 }
