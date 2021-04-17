@@ -38,15 +38,17 @@ import {ref} from "vue";
     #editor{
           width: 70%;
           height: 300px;
-          border: 6px  solid grey;
-          padding: 0;
+          border: 6px  solid black;
+          padding: 20px;
+          box-shadow: 0 0 0 10px lightgrey inset;
           
         }
         .outputPanel{
           width: 70%;
           height: 300px;
-          border: 6px  solid grey;
-          padding: 0px;
+          border: 6px  solid black;
+          padding: 20px;
+          box-shadow: 0 0 0 10px lightgrey inset;
           
         }
         

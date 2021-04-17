@@ -7,7 +7,7 @@
          <el-row>
             <el-col style="text-align:justify" :span="24">
                <span class="attention-text" >LearnHTML</span> is an interactive tool to teach HTML to new learners. This website will provide you with the basic information
-               about HTML
+               about HTML.
             </el-col>
          </el-row>
       </div>

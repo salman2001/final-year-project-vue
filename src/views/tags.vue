@@ -2,10 +2,8 @@
     <h1>
         HTML Tags
     </h1>
-
-    
-        <div class="tags">&lt;!DOCTYPE&gt; should be used in the start of every html document. Its like a declaration which shows what type of document to expect.
-        </div>
+    <div>
+        <div class="tags">&lt;!DOCTYPE&gt; should be used in the start of every html document. Its like a declaration which shows what type of document to expect.</div>
         <div class="tags" >&lt;p&gt; is used for paragraph <button @click="handleClick(`Paragraph Tag`)">Try it yourself</button></div>
         <div class="tags">&lt;head&gt; tag is used for headings <button @click="handleClick(`Head Tag`)">Try it yourself</button></div>
         <div class="tags"> &lt;img&gt; is used to insert images into HTML <button @click="handleClick(`Image Tag`)">Try it yourself</button></div>
@@ -16,6 +14,10 @@
         <div class="tags">&lt;a&gt; tag is used to add online links to webpages <button @click="handleClick(`Link Tag`)">Try it yourself</button></div>
         <div class="tags">&lt;nav&gt; tag is used to add a Navigation bar on the top of the webpage <button @click="handleClick(`Nav Tag`)">Try it yourself</button></div>
         <div class="tags">&lt;form&gt; tag is used to add a Navigation bar on the top of the webpage <button @click="handleClick(`Form Tag`)">Try it yourself</button></div>
+        <div class="tags">&lt;section&gt; tag is used to add a section with paragraphs <button @click="handleClick(`Section Tag`)">Try it yourself</button></div>
+        <div class="tags">&lt;b&gt; tag is used to bold sentences. <button @click="handleClick(`Bold Tag`)">Try it yourself</button></div>
+        </div>
+
 
 
 </template>
@@ -35,27 +37,24 @@ export default {
 
 <style scoped>
 .tags{
-    display: inline-block;
+  display: inline-block;
   width: 90%;
   height: 50px;
-    color: black;
+  color: black;
   padding: 20px;
-  border: 1px solid black;
-  background-color: white;
+  border: 3px solid black;
+  box-shadow: 0 0 0 10px lightgrey inset;
 }
-
 button:hover {   
-        opacity: 0.7;   
-    }   
-    button {   
-       background-color:lightgrey;   
-      
-        color: black;   
-        padding: 4px;   
-          
-        border: 1px solid black;   
-        cursor: pointer;   
-         }   
+  opacity: 0.7;   
+}   
+button {   
+  background-color:lightgrey;   
+  color: black;   
+  padding: 4px;   
+  border: 1px solid black;   
+  cursor: pointer;   
+}   
 
 
 

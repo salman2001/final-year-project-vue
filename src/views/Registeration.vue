@@ -77,7 +77,7 @@ import { firebaseAuthentication, firebaseFireStore } from "@/firebase/database";
 
 export default {
   name: "register",
-  emits: ["register-clicked"],
+  emits: ["registerClicked"],
 
 
   setup(){

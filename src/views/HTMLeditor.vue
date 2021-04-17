@@ -42,9 +42,10 @@ export default {
 
 <style scoped> 
 .container{
-  padding: 5px;
+  padding: 20px;
   width: 40%;
   display: inline-block;
-  border: 6px solid grey;
+  border: 6px solid black;
+  box-shadow: 0 0 0 10px lightgrey inset;
 }
 </style>

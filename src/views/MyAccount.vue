@@ -29,7 +29,7 @@
         <div class="block-1">Contact Number:{{userDetails.phoneNumber}}</div>
       </div>
     </div>
-    <!--<b>
+    <b>
       <div>
         <h1>Update Account</h1>
       </div>
@@ -77,7 +77,7 @@
         ></el-input>
       </el-form-item>
       <el-button>Update Details</el-button>
-    </el-form>-->
+    </el-form>
   </body>
 </template>
 
@@ -164,8 +164,12 @@ button {
 }
 .block{
   display: inline-block;
-  border: 2px solid black;
- 
+  width: 90%;
+  height: auto;
+  color: black;
+  padding: 20px;
+  border: 6px solid black;
+  box-shadow: 0 0 0 10px lightgrey inset;
 }
 .block-1{
   text-align: left;

@@ -2,22 +2,15 @@
 
   <div class="layout">
     <appHeader :user="user" @logout="logout"/>
-
-    <router-view :user="user" @logout="logout" class="globalfont center" >
-    </router-view>
-
-    
-    <appFooter></appFooter>
+    <router-view :user="user" @logout="logout" class="globalfont center"/>
+    <appFooter/>
   </div>
-  
   
 </template>
 <script>
   // @ is an alias to /src
-
   import header from "@/components/header.vue";
   import footer from "@/components/footer.vue";
-  
   import { ref } from "vue";
   import { useRouter } from "vue-router";
   import {
@@ -27,13 +20,10 @@
   } from "@/firebase/database";
   
   export default {
-    
     components: {
       appHeader: header,
-      appFooter: footer,
-      
+      appFooter: footer, 
     },
-    
     setup() {
       const user = ref("");
       const errorLogout = ref(null);
@@ -46,7 +36,6 @@
           user.value == null;
         }
       });
-  
       const router = useRouter();
   
       function logout() {
@@ -60,7 +49,6 @@
           }
         );
       }
-  
       return {
         user,
         logout,

@@ -60,7 +60,7 @@ import { useRouter } from "vue-router";
 
 export default {
   name: "login",
-  emits: ["login-clicked"],
+  emits: ["loginClicked"],
 
   setup() {
     const email = ref("");

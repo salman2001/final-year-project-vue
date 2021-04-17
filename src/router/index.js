@@ -41,9 +41,9 @@ const routes = [
     component: () => import('@/views/ForgotPassword.vue')
   },
   {
-    path: '/data',
-    name: 'data',
-    component: () => import('@/views/data.vue')
+    path: '/quiz',
+    name: 'quiz',
+    component: () => import('@/views/quiz.vue')
   },
   {
     path: '/tags',

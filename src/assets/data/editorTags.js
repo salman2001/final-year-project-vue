@@ -121,6 +121,31 @@ This is a Text Area
           "The Form tag is used to make a form that lets the user input values and its used together with input so that there is a specified space where the user needs to put in the information.The placeholder can tell the user what needs to be inputted into that specificm field.",
         contentList: [],
     },
+    {
+        tagId: "Section Tag",
+        title: "Section tags",
+        codeString: `
+<section>
+    <h2>Section 1</h2>
+        <p>Paragraph for section 1 will be here</p>
+</section>
+<section>
+    <h2>Section 2</h2>
+        <p>Paragraph for section 2 should be here</p>
+</section>`,
+        content:
+          "The section tags are used to divide paragraphs into different sections and the user can also give some headings to each section. To add more paragraphs just add some more sections below this code.",
+        contentList: [],
+    },
+    {
+        tagId: "Bold Tag",
+        title: "Bold tags",
+        codeString: `
+<p>this is without bold - <b>this is with bold</b></p> `,
+        content:
+          "<b> tag is used to bold sentences in a paragraph or divs. They dont make it any important but just makes them bolder than the rest of the paragraph.",
+        contentList: [],
+    },
 ]
 
 export default allTags;

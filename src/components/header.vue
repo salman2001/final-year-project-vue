@@ -19,7 +19,7 @@
             </button>
             <div class="dropdown-content">
                <router-link  :to="{ name: 'MyAccount'}">My Account</router-link>
-               <router-link style="float:left" v-bind:to="{ name: 'data' }">Data</router-link>
+               <router-link style="float:left" v-bind:to="{ name: 'quiz' }">Quiz</router-link>
                <a @click="$emit('logout'); redirectToLogin">Logout</a>
             </div>
          </div>

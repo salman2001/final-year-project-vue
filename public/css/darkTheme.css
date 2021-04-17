@@ -44,7 +44,7 @@ button[data-v-06ae9968]{
 #footer a[data-v-6c4d8baa]{
     color: black;
 }
-.outputPanel[data-v-18686cfd]{
+.outputPanel[data-v-18686cfd], .outputPanel[data-v-10ed09f0]{
     background-color: white;
 }
 .el-card__body{
