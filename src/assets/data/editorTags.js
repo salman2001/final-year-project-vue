@@ -24,7 +24,7 @@ const allTags = [
     {
         tagId: "Image Tag",
         title: "Image tags",
-        codeString: `<img src="https://www.computerhope.com/jargon/h/html.png" width="200" height="200">`,
+        codeString: `<img src="https://www.mmu.ac.uk/brand/logo/2.2-Secondary-Logo_1.jpg" width="200" height="200">`,
         content:
           "The Image tag is used to add different images in HTML and they can be images taken from websites or you can store them locally in your project folder. You just need to specify the source of the image and you can set the height or width within the image tag",
         contentList: [],
@@ -118,7 +118,7 @@ This is a Text Area
     <input type="submit" value="Submit">
 </form>`,
         content:
-          "The Form tag is used to make a form that lets the user input values and its used together with input so that there is a specified space where the user needs to put in the information.The placeholder can tell the user what needs to be inputted into that specificm field.",
+          "The Form tag is used to make a form that lets the user input values and its used together with input so that there is a specified space where the user needs to put in the information.The placeholder can tell the user what needs to be inputted into that specific field.",
         contentList: [],
     },
     {

@@ -1,5 +1,5 @@
 <template>
-<el-row>
+<el-row >
   <el-col :span="23" class="mainContent">
     <el-form ref="form" label-width="auto" 
       @keyup.enter="register()"
@@ -55,7 +55,7 @@
       </el-form-item>
 
       <div v-if="errorRegistration">
-        <el-button plain type="danger" disabled icon="el-icon-error">
+        <el-button plain type="danger" disabled class="el-icon-error">
           {{ errorRegistration }}
         </el-button>
       </div>
@@ -63,7 +63,7 @@
       <el-form-item>
         <el-row>
       <el-col :span="14">
-        <el-button type="primary" @click="register">Register</el-button>
+        <el-button type="info" @click="register">Register</el-button>
       </el-col></el-row>
       </el-form-item>
     </el-form>
@@ -113,7 +113,7 @@ export default {
         if (!errorRegistration.value){
           const res = await firebaseAuthentication
           .createUserWithEmailAndPassword(info.email, info.password)
-              router.replace("my_account");
+              router.replace("/");
           console.log(res)
           firebaseFireStore.collection('users').doc(`${res.user.uid}`).set(info)
         }
@@ -135,13 +135,18 @@ export default {
 <style scoped>
 
 button {   
-       background-color:black;   
-       width: 100%;  
-        color: white;   
-        padding: 15px;   
-        margin: 10px 0px;   
-        border: none;   
-        cursor: pointer;   
+  
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  width: 80%;
+  
          }   
  input[type=text], input[type=password] {   
         width: 20%;   

@@ -3,9 +3,9 @@
   <div class="layout">
     <appHeader :user="user" @logout="logout"/>
     <router-view :user="user" @logout="logout" class="globalfont center"/>
-    <appFooter/>
+    
   </div>
-  
+  <appFooter/>
 </template>
 <script>
   // @ is an alias to /src

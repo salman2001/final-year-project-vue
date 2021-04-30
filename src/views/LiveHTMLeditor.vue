@@ -1,5 +1,5 @@
 <template>
-<h1 style="text-align :center">Live Html Editor</h1>
+<h1 class="container" style="text-align :center">Live Html Editor</h1>
     <htmlEditor/>
 
 </template>

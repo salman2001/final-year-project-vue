@@ -2,10 +2,10 @@
    <div class="home">
       <!-- <img alt="Vue logo" src="../assets/logo.png">
          <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-      <h1 id="welcomeMessage" align="center">Learn HTML </h1>
+      <h1  class="container" id="welcomeMessage" align="center">Welcome to LearnHTML</h1>
       <div class="text-block">
          <el-row>
-            <el-col style="text-align:justify" :span="24">
+            <el-col class="container" style="text-align:justify" :span="24">
                <span class="attention-text" >LearnHTML</span> is an interactive tool to teach HTML to new learners. This website will provide you with the basic information
                about HTML.
             </el-col>
@@ -13,7 +13,7 @@
       </div>
         
       <div round v-if="!user" class="text-block">
-         <el-row>
+         <el-row class="container">
             <el-col @click="gotoRegister" :offset="1" :span="10" class="login-or-register">
                If this is your first time <span class="attention-text">Register</span> to get started!<br>
                <!-- <router-link :to="{ name: 'Registration'}"><span>Registration</span></router-link> -->
@@ -66,7 +66,7 @@ export default {
 
 <style>
 #welcomeMessage{
-   transition: transform .2s;
+   transition: transform .1s;
 }
 #welcomeMessage:hover{
    transform:scale(1.1);
@@ -81,7 +81,8 @@ export default {
    border: 1px solid black;
    border-radius: 2px 20px 2px 20px;
    cursor: pointer;
-   transition: transform .3s;
+   background-color: lightgrey;
+   transition: transform .2s;
 }
 
 .login-or-register:hover{
@@ -93,4 +94,4 @@ export default {
    font-weight:bold;
 }
 
-</style>
+   </style>

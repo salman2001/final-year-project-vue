@@ -43,7 +43,7 @@
         </el-row>
 
         <el-form-item>
-          <el-button type="primary" @click="login">Login</el-button>
+          <el-button type="info" @click="login">Login</el-button>
             <h2 align="center" color="black">
               <router-link to="/forgot-password">Forgot password ?</router-link>
             </h2>
@@ -122,21 +122,24 @@ export default {
 };
 </script>
 <style scoped>
-  button {
-    background-color: black;
-    width: 100%;
-    color: white;
-    padding: 15px;
-    margin: 10px 0px;
-    border: none;
-    cursor: pointer;
-  }
+ button {   
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  width: 100%;
+  
+         }   
   button:hover {
     opacity: 0.7;
+    
   }
-  
-  input[type="text"],
-  input[type="password"] {
+  input[type="text"],input[type="password"] {
     width: 100%;
     margin: 8px 0;
     padding: 12px 20px;

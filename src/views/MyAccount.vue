@@ -1,18 +1,15 @@
 <template>
-  <div class="about">
-    <h1>My Account</h1>
-  </div>
   <body v-if="userDetails">
-    <div class="profile">
+    <div class="container">
       <div>
         <el-card class="box-card">
           <div>
             <div>
               Welcome Back
-              <span style="color: green; font-weight: bold"> {{ userDetails.email }} </span>
+              <span style="color: black; font-weight: bold"> {{ userDetails.email }} </span>
               <br />
               <el-button
-                type="text"
+                type="info"
                 icon="el-icon-user"
                 @click="$emit('logout')"
                 >Logout</el-button
@@ -22,62 +19,13 @@
         </el-card>
       </div>
       <div class="block">
+        <div class="container">Your Details</div>
         <div class="block-1">Full Name : {{userDetails.fullName}}</div>
         <div class="block-1">Email: {{userDetails.email}}</div>
         <div class="block-1">Institution: {{userDetails.institution}}</div>
-        <div class="block-1"> Address: {{userDetails.address}}</div>
         <div class="block-1">Contact Number:{{userDetails.phoneNumber}}</div>
       </div>
     </div>
-    <b>
-      <div>
-        <h1>Update Account</h1>
-      </div>
-    </b>
-    <div>To update your account details please fill out the form below:</div>
-    <el-form>
-      <el-form-item label="Username">
-        <el-input
-          v-model="username"
-          :placeholder= userDetails.email
-          autocomplete="off"
-          required
-        ></el-input>
-      </el-form-item>
-      <el-form-item label="Name">
-        <el-input
-          v-model="fullName"
-          :placeholder= userDetails.fullName
-          autocomplete="off"
-          required
-        ></el-input>
-      </el-form-item>
-      <el-form-item label="Institution">
-        <el-input
-          v-model="institution"
-          :placeholder= userDetails.institution
-          autocomplete="off"
-          required
-        ></el-input>
-      </el-form-item>
-      <el-form-item label="Address">
-        <el-input
-          v-model="address"
-          :placeholder= userDetails.address
-          autocomplete="off"
-          required
-        ></el-input>
-      </el-form-item>
-      <el-form-item label="phoneNumber">
-        <el-input
-          v-model="contact_details"
-          :placeholder= userDetails.phoneNumber
-          autocomplete="off"
-          required
-        ></el-input>
-      </el-form-item>
-      <el-button>Update Details</el-button>
-    </el-form>
   </body>
 </template>
 
@@ -153,23 +101,30 @@ export default {
 button:hover {
   opacity: 0.9;
 }
-button {
+button {   
+  background-color: grey;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
-  background-color: black;
-  width: 50%;
-  color: white;
-  padding: 15px;
-  margin: 10px 0px;
-  cursor: pointer;
-}
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  width: 80%;
+  
+         }   
 .block{
   display: inline-block;
-  width: 90%;
-  height: auto;
+  width: 70%;
+  height: 200px;
   color: black;
   padding: 20px;
-  border: 6px solid black;
-  box-shadow: 0 0 0 10px lightgrey inset;
+  border: 4px  solid rgb(124, 124, 124) ;
+    border-radius: 6px;
+    
+    box-shadow: 0 0 0 5px rgba(128, 128, 128, 0.75)inset;
 }
 .block-1{
   text-align: left;

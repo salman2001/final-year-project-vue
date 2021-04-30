@@ -42,7 +42,7 @@ export default {
 </script>
 <style scoped>
 button {
-    background-color: black;
+    background-color: grey;
     width: 35%;
     color: white;
     padding: 15px;
@@ -61,7 +61,10 @@ button {
     margin: 8px 0;
     padding: 12px 20px;
     display: inline-block;
-    border: 2px solid black;
+    border: 4px  solid rgb(124, 124, 124) ;
+      border-radius: 6px;
+      
+      box-shadow: 0 0 0 5px rgba(128, 128, 128, 0.75)inset;
     box-sizing: border-box;
   }
   .cancelbtn {

@@ -1,25 +1,23 @@
 <template>
-   <div id="nav">
-      <router-link style="float:left" v-bind:to="{ name: 'Home' }">Home</router-link> 
-      <router-link style="float:left" v-bind:to="{ name: 'About' }">About</router-link>
-      <router-link style="float:left" v-bind:to="{ name: 'Editor' }">Live Editor</router-link>
+   <div id="nav" class="container">
+      <router-link class="el-icon-s-home" style="float:left" v-bind:to="{ name: 'Home' }">Home</router-link> 
+      <router-link style="float:left" v-bind:to="{ name: 'Editor' } ">&lt;/&gt;Live Editor</router-link>
       <router-link style="float:left" v-bind:to="{ name: 'tags' }">HTML Elements</router-link> 
-      <button style="float: right" color="grey" @click="darkThemeSwitch">{{isActive ? 'Light Mode' : 'Dark Mode'}}</button>
+      <router-link class="el-icon-guide" style="float:left" v-bind:to="{ name: 'About' }">About</router-link>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Login'}">Login</router-link>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Registration'}">Register</router-link>
 
       <div style="float:right" v-if="user" >
          <div class="dropdown">
-           <i icon="el-icon-user"> </i>
+           <i class="el-icon-user"> </i>
             <button class="dropbtn" icon="el-icon-user" >
             <i icon="el-icon-user"> </i>
             <i class="fa fa-user"></i>
-            Logged in ({{ user }})
-            <i class="fa fa-caret-down"></i>
+            Logged in ({{ user }}) 
+            <i class="el-icon-more-outline"></i>
             </button>
             <div class="dropdown-content">
                <router-link  :to="{ name: 'MyAccount'}">My Account</router-link>
-               <router-link style="float:left" v-bind:to="{ name: 'quiz' }">Quiz</router-link>
                <a @click="$emit('logout'); redirectToLogin">Logout</a>
             </div>
          </div>
@@ -42,29 +40,6 @@ export default {
     'logout'
   ],
   methods: {
-    _addDarkTheme() {
-      let darkThemeLinkEl = document.createElement("link");
-      darkThemeLinkEl.setAttribute("rel", "stylesheet");
-      darkThemeLinkEl.setAttribute("href", "/css/darktheme.css");
-      darkThemeLinkEl.setAttribute("id", "dark-theme-style");
-
-      let docHead = document.querySelector("head");
-      docHead.append(darkThemeLinkEl);
-    },
-    _removeDarkTheme() {
-      let darkThemeLinkEl = document.querySelector("#dark-theme-style");
-      let parentNode = darkThemeLinkEl.parentNode;
-      parentNode.removeChild(darkThemeLinkEl);
-    },
-    darkThemeSwitch() {
-      let darkThemeLinkEl = document.querySelector("#dark-theme-style");
-      if (!darkThemeLinkEl) {
-        this._addDarkTheme()
-      } else {
-        this._removeDarkTheme()
-      }
-      this.isActive = this.isActive ? false : true;
-    },
   },
   setup(){
     let router = useRouter();
@@ -83,20 +58,20 @@ export default {
 <style scoped>
 #nav {
   overflow: hidden;
-  background-color: black;
+  background-color: rgb(158, 158, 158);
 }
 
 #nav a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 22px 24px;
   text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #333333;
 }
 
 
@@ -109,7 +84,7 @@ export default {
   font-size: 16px;  
   border: none;
   outline: none;
-  color: white;
+  color: rgb(58, 57, 57);
   padding: 22px 24px;
   background-color: inherit;
   font-family: inherit;
@@ -117,16 +92,17 @@ export default {
 }
 
 #nav a:hover, .dropdown:hover .dropbtn {
-  background-color: black;
+  background-color: rgba(26, 24, 24, 0.137);
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: rgba(41, 40, 40, 0.507);
   min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+ 
 }
 
 .dropdown-content a {
@@ -139,7 +115,7 @@ export default {
 }
 
 .dropdown-content a:hover {
-  background-color: #7e2023;
+ 
   cursor: pointer;  
 }
 

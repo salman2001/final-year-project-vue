@@ -2,10 +2,12 @@
 
 <h1>{{tag}}</h1>
 <div class="">
-  <p1 class="container">{{tagData.content}}</p1>
+  <p1 class="container-box">{{tagData.content}}</p1>
   <editor :tagData="tagData"/>
 </div>
-
+<div>
+<router-link style="float:left" v-bind:to="{ name: 'tags' }">Back to Tags Page</router-link> 
+</div>
 </template>
 <script>
 import { useRoute } from 'vue-router';
@@ -41,11 +43,12 @@ export default {
 </script>
 
 <style scoped> 
-.container{
+.container-box{
   padding: 20px;
-  width: 40%;
+  width: 90%;
   display: inline-block;
-  border: 6px solid black;
-  box-shadow: 0 0 0 10px lightgrey inset;
+
+  border: 3px solid rgb(124, 124, 124);
+  box-shadow: 0 0 0 5px rgba(128, 128, 128, 0.75) inset;
 }
 </style>

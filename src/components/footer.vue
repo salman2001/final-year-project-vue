@@ -9,11 +9,10 @@
 
 <style scoped>
 #footer {
-  display: block;
-   margin: 0;
-  overflow: hidden;
-    bottom: 50px;
-
+  position:inherit;
+  bottom: 0;
+  width: auto;
+  height: 2.5rem;  
 }
 
 #footer a {
