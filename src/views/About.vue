@@ -4,7 +4,7 @@
     <div>To sign up you need to head to the registeration page where you will provide all your details to sign up</div>
   </el-collapse-item>
   <el-collapse-item title="How to Use the HTML elements Page?" name="2">
-    <div>In HTML elements page read about different element tags and try the code on a live HTML editor using the Try it button</div>
+    <div>You need to sign up or Login to use the HTML page. In HTML elements page read about different element tags and try the code on a live HTML editor using the Try it button</div>
   </el-collapse-item>
   <el-collapse-item title="How to Login if you are already registered?" name="3">
     <div>To Login head to the login page located at the top right corner or there is a link on the Homepage as well.</div>

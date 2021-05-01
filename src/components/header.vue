@@ -2,11 +2,11 @@
    <div id="nav" class="container">
       <router-link class="el-icon-s-home" style="float:left" v-bind:to="{ name: 'Home' }">Home</router-link> 
       <router-link style="float:left" v-bind:to="{ name: 'Editor' } ">&lt;/&gt;Live Editor</router-link>
-      <router-link style="float:left" v-bind:to="{ name: 'tags' }">HTML Elements</router-link> 
+      
       <router-link class="el-icon-guide" style="float:left" v-bind:to="{ name: 'About' }">About</router-link>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Login'}">Login</router-link>
       <router-link style="float:right" round v-if="!user" :to="{ name: 'Registration'}">Register</router-link>
-
+      <div v-if="user"><router-link :to="{ name: 'tags' }">HTML Elements</router-link> </div>
       <div style="float:right" v-if="user" >
          <div class="dropdown">
            <i class="el-icon-user"> </i>
